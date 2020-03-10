@@ -102,7 +102,7 @@ namespace EngineTests
             int result = engine.NumberOfTemperatures();
 
             // assert
-            Assert.AreEqual(0, result);
+            Assert.AreEqual(7, result);
         }
     }
 }
