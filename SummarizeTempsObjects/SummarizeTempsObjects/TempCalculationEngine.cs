@@ -30,16 +30,15 @@ namespace SummarizeTempsObjects
 
         public int TempsAboveThreshold(int threshold)
         {           
-                int AboveSum = 0;
+            int AboveSum = 0;
 
-                foreach (int temp in _temperatures)
+            foreach (int temp in _temperatures)
+            {
+                if (temp > threshold)
                 {
-                    if (temp > threshold)
-                    {
-                        AboveSum += 1;
-                    }
-                  
+                    AboveSum += 1;
                 }
+            }
 
             // add logic to calculate temps above the threshold
             return AboveSum; // <-- Replace this with the number
@@ -47,22 +46,36 @@ namespace SummarizeTempsObjects
 
         public int TempsBelowThreshold(int threshold)
         {
+            int BelowSum = 0;
+
+            foreach (int temp in _temperatures)
+            {
+                if (temp < threshold)
+                {
+                    BelowSum += 1;
+                }
+            }
+
             // add logic to calculate and return temps below the threshold
-            return 0; // <-- Replace this with the number
+            return BelowSum; // <-- Replace this with the number
         }
 
         public int TempsAtThreshold(int threshold)
         {
-            // add logic to calculate and return temps at the threshold
-            /*
-            if
-                {TempsAtThreshold = 0}
-            then
-                { 
-            } 
-            */
-            return 0; // <-- Replace this with the number
+            int AtSum = 0;
+
+            foreach (int temp in _temperatures)
+            {
+                if (temp = threshold)
+                {
+                    AtSum += 1;
+                }
+            }
+
+            // add logic to calculate and return temps below the threshold
+            return AtSum; // <-- Replace this with the number
         }
+    
 
         public int NumberOfTemperatures()
         {
