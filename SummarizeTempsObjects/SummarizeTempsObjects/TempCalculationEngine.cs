@@ -66,7 +66,7 @@ namespace SummarizeTempsObjects
 
             foreach (int temp in _temperatures)
             {
-                if (temp = threshold)
+                if (temp == threshold)
                 {
                     AtSum += 1;
                 }
